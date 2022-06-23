@@ -1,0 +1,340 @@
+Create and populate tables in SQL
+Customer:
+CREATE TABLE Customer (
+Cust_ID varchar(50), 
+CName varchar(50), 
+DOB date, 
+Address varchar(50), 
+Phone_no bigint, 
+Email varchar(50), 
+E_Phone_no bigint,
+primary key (Cust_id) );
+
+Insert into Customer values(133, ’M G’, ’1968-10-13’, ’Dubai’, 971509845631,  ‘m@gmail.com’, 971562467104);
+Insert into Customer values(137, ’J J’, 1997-07-21, ’Ajman’, 971200489945, ’j@gmail.com’, 971400783098);
+Insert into Customer values(146, ‘A D’,1999-05-20,‘Fujairah’,971164860345’, ‘a@gmail.com’, 971234965678);
+Insert into Customer values(234,’D S’, ‘1996-12-12’,’Sharjah’,971569024786, ’d@gmail.com’, 971502378456);
+Insert into Customer values(262,’R F’, ’1998-05-21’, ’Abu Dhabi’, 971558453285, ‘r@gmail.com’, 971509339346);
+Insert into customer values(101,’R D’,’2001-09-12’,’Dubai’,971507574892,’rach32@gmail.com’,971506798434);
+Insert into customer values(256,’Richard J’,’1998-09-13’,’Sharjah’,971506374162, ’richard@gmail.com’, 971503791637);
+Insert into customer values(123,’Jack D’,’2000-08-22’,’Ajman’,971501544492, ’jack@gmail.com’, 971504355434);
+
+
+
+
+
+
+CTravelDetails:
+Create Table CTravelDetails( 
+Cust_ID varchar(50) , 
+PassNo varchar(50),
+ExpDate date, 
+Nationality varchar(50) ,
+primary key (Cust_ID)) ; 
+
+Insert into CTravelDetails values(‘133’,’TYO7862U’,’2023-09-10’,’Australia’);
+Insert into CTravelDetails values(‘137’,’BHT3210Y’,’2025-11-20’,’Pakistan’);
+Insert into CTravelDetails values(‘146’,’NGC4324T’,’2024-10-14’,’UAE’);
+Insert into CTravelDetails values(‘234’,’QUI2678T’,’2026-02-26’,’India’);
+Insert into CTravelDetails values(‘262’,’FHJ4338F’,’2025-10-17’,’France’);
+Insert into CTravelDetails values(‘101’,’LX32000E’,’2026-03-21,’India’);
+Insert into CTravelDetails values(‘256’,’JK22000R’,’2022-05-01,’United States’);
+Insert into CTravelDetails values(‘123’,’LX82070T’,’2022-03-21,’JAPAN’);
+
+Booking:
+Create Table Booking(
+Book_ID varchar(50),
+Cust_ID varchar(50),
+No_Of_Ppl int,
+Start_Date date,
+End_Date date,
+P_ID varchar(50),
+Price float;
+)
+
+Insert into Booking values (‘897’, ’133’,4,’2021-09-10’,’2021-09-17’,‘DXBCDG1’, 4000 );
+Insert into Booking values (‘567’, ’137’,3,’2021-05-21’,’2021-05-27’,‘DXBLHR1’,5000 );
+Insert into Booking values (‘445’, ’146’,1,’2021-07-11’,’2021-07-20’,‘SHJJFK2’,9000 );
+Insert into Booking values (‘678’, ’234’,5,’2021-08-30’,’2021-08-04’,‘SHJSYD1’,2000 );
+Insert into Booking values (‘928’, ’262’,2,’2021-11-08’,’2021-11-16’,‘AUHPEK3’,6000 );
+PackAct:
+Create table Pack_Act( 
+P_ID varchar(20),
+A_ID varchar(50)
+Primary key (P_ID,A_ID)); 
+#DUBAI-PARIS PACKAGES AND ACTIVITIES
+Insert into Pack_Act values(‘DXBCDG1’,’DISNEY’);
+Insert into Pack_Act values(‘DXBCDG1’,’EIFFT’);
+Insert into Pack_Act values(‘DXBCDG1’,’LOUV’);
+ Insert into Pack_Act values(‘DXBCDG1’,’ADT’);
+
+Insert into Pack_Act values(‘DXBCDG2’,’DISNEY’);
+Insert into Pack_Act values(‘DXBCDG2’,’EIFFT’);
+
+Insert into Pack_Act values(‘DXBCDG3’,’EIFFT’);
+Insert into Pack_Act values(‘DXBCDG3’,’LOUV’);
+ Insert into Pack_Act values(‘DXBCDG3’,’ADT’);
+
+#DUBAI-LONDON PACKAGES AND ACTIVITIES
+Insert into Pack_Act values(‘DXBLHR1’,’BIGB’);
+Insert into Pack_Act values(‘DXBLHR1’,’BUCKP’);
+Insert into Pack_Act values(‘DXBLHR1’,’MDMT’);
+Insert into Pack_Act values(‘DXBLHR1’,’TFGSQ’);
+
+Insert into Pack_Act values(‘DXBLHR2’,’BIGB’);
+Insert into Pack_Act values(‘DXBLHR2’,’BUCKP’);
+Insert into Pack_Act values(‘DXBLHR2’,’LHRBRGD’);
+
+
+Insert into Pack_Act values(‘DXBLHR3’,’BIGB’);
+Insert into Pack_Act values(‘DXBLHR3’,’BUCKP’);
+Insert into Pack_Act values(‘DXBLHR3’,’LHRBRGD’);
+Insert into Pack_Act values(‘DXBLHR3’,’MDMT’);
+Insert into Pack_Act values(‘DXBLHR3’,’TFGSQ’);
+
+# SHARJAH-NEWYORK PACKAGES AND ACTIVITIES
+Insert into Pack_Act values(‘SHJJFK1’,’TIMESQ’);
+Insert into Pack_Act values(‘SHJJFK1’,’SLIB’);
+Insert into Pack_Act values(‘SHJJFK1’,’EMP’);
+Insert into Pack_Act values(‘SHJJFK1’,’CP’);
+
+Insert into Pack_Act values(‘SHJJFK2’,’TIMESQ’);
+Insert into Pack_Act values(‘SHJJFK2’,’SLIB’);
+Insert into Pack_Act values(‘SHJJFK2’,’EMP’);
+Insert into Pack_Act values(‘SHJJFK2’,’CP’);
+Insert into Pack_Act values(‘SHJJFK2’,’NHM’);
+Insert into Pack_Act values(‘SHJJFK2’,’FVAVE’);
+
+Insert into Pack_Act values(‘SHJJFK3’,’STATOFLIB’);
+Insert into Pack_Act values(‘SHJJFK3’,’EMPSTATE’);
+Insert into Pack_Act values(‘SHJJFK3’,’FVAVE’);
+Insert into Pack_Act values(‘SHJJFK2’,’CP’);
+
+#SHARJAH-SYDNEY PACKAGES AND ACTIVITIES
+Insert into Pack_Act values(‘SHJSYD1’,’OHB’);
+Insert into Pack_Act values(‘SHJSYD1’,’WW’);
+Insert into Pack_Act values(‘SHJSYD1’,’QVS’);
+
+Insert into Pack_Act values(‘SHJSYD2’,’OHB’);
+Insert into Pack_Act values(‘SHJSYD2’,’SZOO’);
+Insert into Pack_Act values(‘SHJSYD2’,’JCAV’);
+Insert into Pack_Act values(‘SHJSYD2’,’WW’);
+
+Insert into Pack_Act values(‘SHJSYD3’,’OHB’);
+Insert into Pack_Act values(‘SHJSYD3’,’SZOO’);
+Insert into Pack_Act values(‘SHJSYD3’,’WW’);
+Insert into Pack_Act values(‘SHJSYD3’,’JCAV’);
+Insert into Pack_Act values(‘SHJSYD3’,’QVS’);
+
+#ABU DHABI-BEIJING PACKAGES AND ACTIVITIES 
+Insert into Pack_Act values(‘AUHPEK1’, ‘GWC’);
+Insert into Pack_Act values(‘AUHPEK1’, ‘NSVL’);
+Insert into Pack_Act values(‘AUHPEK1’, ‘BNS’);
+
+Insert into Pack_Act values(‘AUHPEK2’, ‘GWC’);
+Insert into Pack_Act values(‘AUHPEK2’, ‘BNS’);
+Insert into Pack_Act values(‘AUHPEK2’, ‘BZOO’);
+Insert into Pack_Act values(‘AUHPEK2’, ‘FBC’);
+
+Insert into Pack_Act values(‘AUHPEK3’, ‘GWC’);
+Insert into Pack_Act values(‘AUHPEK3’, ‘FBC’);
+Insert into Pack_Act values(‘AUHPEK3’, ‘BZOO’);
+Insert into Pack_Act values(‘AUHPEK3’, ‘NSVL’);
+Insert into Pack_Act values(‘AUHPEK3’,’BNS’);
+
+PackFly:
+Create Table PackFly( 
+P_ID varchar(50),
+FlightNo varchar(20) , 
+Primary key (P_ID,FlightNo) ; 
+
+
+Insert into PackFly values(‘DXBCDG1,’EK565’);
+Insert into PackFly values(‘DXBCDG1’,’EK600’);  
+
+Insert into PackFly values(‘DXBCDG2’,’AF100’);  
+Insert into PackFly values(‘DXBCDG2’,’AF370’);  
+
+Insert into PackFly values(‘DXBCDG3’,’EK565’);  
+Insert into PackFly values(‘DXBCDG3’,’AF370’);  
+
+Insert into PackFly values(‘DXBLHR1’,’EK234’); 
+Insert into PackFly values(‘DXBLHR1’,’EK200’); 
+
+Insert into PackFly values(‘DXBLHR2’,’EK234’); 
+Insert into PackFly values(‘DXBLHR2’,’BA214’);
+
+Insert into PackFly values(‘DXBLHR3’,’VS200’); 
+Insert into PackFly values(‘DXBLHR3’,’VS112’); 
+
+Insert into PackFly values(‘SHJJFK1’,’EK750’);
+Insert into PackFly values(‘SHJJFK1’,’EK751’);
+
+Insert into PackFly values(‘SHJJFK2’,’AA700’);
+Insert into PackFly values(‘SHJJFK2’,’AA412’)
+
+Insert into PackFly values(‘SHJJFK3’,’EK750’);
+Insert into PackFly values(‘SHJJFK3’,’AA415’); 
+
+
+Insert into PackFly values(‘SHJSYD1’,’EK155’);
+Insert into PackFly values(‘SHJSYD1’,’EK255’);
+
+
+Insert into PackFly values(‘SHJSYD2’,’QF512’);
+Insert into PackFly values(‘SHJSYD2’,’QF766’);
+
+Insert into PackFly values(‘SHJSYD3’,’QF221’);
+Insert into PackFly values(‘SHJSYD3’,’QF276’);
+
+Insert into PackFly values(‘AUHPEK1’,’CA217’); 
+Insert into PackFly values(‘AUHPEK1’,’EK217’);
+
+Insert into PackFly values(‘AUHPEK2’,’EK712’); 
+Insert into PackFly values(‘AUHPEK2’,’EK217’);  
+
+Insert into PackFly values(‘AUHPEK3’,’EK121’);  
+Insert into PackFly values(‘AUHPEK3’,’EK217’); 
+
+Package:
+Create table Package(
+P_ID varchar(50),
+P_Name varchar(50), 
+No_of_Days int,
+H_ID varchar(20),
+Destination varchar(50),
+Primary key(P_ID));
+
+Insert into Package values(‘DXBCDG1’,’Paris Super Tour’,7,’MOV’,’Paris’);
+Insert into Package values(‘DXBCDG2’,’Paris Fun Tour’,7,’UHM’,’Paris’);
+Insert into Package values(‘DXBCDG3’,’Paris Singles Package’,4,’MRR’,’Paris’);
+
+Insert into Package values(‘DXBLHR1’,’London Family Package ’,6,’GOR’,’London’);
+Insert into Package values(‘DXBLHR2’,’London Sightseeing Package ’,4,’FOU’,’London’);
+Insert into Package values(‘DXBLHR3’,’London Queen Tour’,10,’HLI’,’London’);
+
+Insert into Package values(‘SHJJFK1’,NewYork Family Package’,7,’MOXY’,’New York’);
+Insert into Package values(‘SHJJFK2’,New York Super Tour’,8,’WLV’,’New York’);
+Insert into Package values(‘SHJJFK3’,New York Couples Package’,6,’HLG’,’New York);
+
+Insert into Package values(‘SHJSYD1’,’Sydney Couples Package’’,4,’HDT’,’Sydney’);
+Insert into Package values(‘SHJSYD2’,’Sydney Fun Tour’’,6,’SRS’,’Sydney’);
+Insert into Package values(‘SHJSYD3’,’Sydney Exclusive Koala Package’ ,9,’RBLU’,’Sydney’);
+
+Insert into Package values(‘AUHPEK1’,’BEIJING Single Package’,6,’HIL’,’Beijing’);
+Insert into Package values(‘AUHPEK2’,’BEIJING Family Package’’,5,’CROWNEP’,’Beijing’);
+ Insert into Package values(‘AUHPEK3’,’BEIJING Super Tour’’,6,’HYATT’,’Beijing’);
+
+Hotel:
+Create Table Hotel (
+H_ID varchar(50),
+H_Name varchar(50),
+H_Rating int,
+Type_Room varchar(50),
+H_location varchar(50)
+Primary key (H_ID));
+#Paris
+Insert into Hotel values(’MOV’,’Movenpick’,5,’Delux’,’Victor Seine’);
+insert into Hotel values(‘UHM’,’Utopia Hotel Mons’,4,’Double’,’Les Salines’);
+insert into Hotel values(‘MRR’, ‘Marriot’, 5, ‘Single’, ‘Neumühlequai’);
+#London
+Insert into Hotel values(’GOR’,’Gordon Ramsay’,4,’King’,’ SW1V 1QA’);
+Insert into Hotel values(’FOU’,’Four Seasons’,4,’Delux’,199 Georgia St’);
+Insert into Hotel values(’HLI’,’Holiday Inn’ ’,5,’Pres Suite ’, ‘Paddington’’);
+#New York
+Insert into Hotel values(’MOXY’,’Moxy TSQ’,4,’Double’,’Manhattan’);
+Insert into Hotel values(’WLV’,’WeLive’,5,’Deluxe’,’Wall Street’);
+Insert into Hotel values(’HLG’,’Hilton Garden’,3,’Double’,’West 35 Street’);
+
+#Sydney
+Insert into Hotel values(’HDT’,’Hilton DoubleTree’,’4’ ,’ Double ’,’Downtown Sydney’’);
+insert into Hotel values(‘SRS’,’Sheraton Sydney’,4,’Delux’,’Sunway Street’’);
+insert into Hotel values(‘RBLU’ ’,’Radisson Blu’,5,’Pres Suite ’,’Koala Hill’);
+
+#Beijing
+Insert into Hotel values(’HIL',’Hilton’,5,’Double’,’Chaoyang’);
+Insert into Hotel values(‘CROWNEP’,Crowne Plaza’,4,’Double’,Chaoyang’);
+Insert into Hotel values(‘HYATT’,’Hyatt Place’,5 ,’Deluxe’, ‘Xinya Street’);
+
+
+Airplane: 
+Create Table Airplane (
+FlightNo varchar(50), 
+FlightName varchar(50), 
+DepTime varchar(50),
+ArrTime varchar(50), 
+AirportName varchar(50), 
+Type varchar(50),
+Primary key(FlightNo) ); 
+
+Insert into Airplane values (’’EK565’,’Emirates’,’14:00:00’,’20;30:09’, ‘Charles de Gaulle Airport’,’Business’);
+Insert into Airplane values (’’EK600’,’Emirates’,’12:00:00’,’22:30:00’, ‘Dubai International Airport',’Business’);
+Insert into Airplane values (’AF100’,’Air France’,’20:05:59’,’02:05:00’,’Charles de Gaulle Airport’,’Economy’);
+Insert into Airplane values (’AF370’,’Air France’,’21:05:59’,’04:05:00’,’Dubai International Airport’,’Economy’);
+
+Insert into Airplane values(‘’EK234’,’Emirates’,’11:00:00’,’19:10:00’,’Heathrow Airport,’Economy’);
+Insert into Airplane values(‘’EK200’,’Emirates’,’11:00:00’,’19:10:00’,’Dubai International Airport,’Economy’);
+Insert into Airplane values(‘’BA214’,’British Airlines’,’11:00:00’,’19:10:00’,’Dubai International Airport,’Business’);
+Insert into Airplane values(‘’VS200’,’Virgin Atlantic’,’11:00:00’,’19:10:00’,’Heathrow Airport,’First’);
+Insert into Airplane values(‘’VS112’,’Virgin Atlantic’,’11:00:00’,’19:10:00’,’Dubai International Airport’,’First’);
+
+Insert into Airplane values(‘EK750’,Emirates’,’12:00:00’,’04:30:00’,’John F. Kennedy Airport’,’Economy’);
+Insert into Airplane values(‘EK751’,Emirates’,’12:00:00’,’04:30:00’,’Sharjah International Airport’,’Economy’);
+Insert into Airplane values(‘AA700’,American Airlines’,’12:00:00’,’04:30:00’,’John F. Kennedy Airport’,’Business’);
+Insert into Airplane values(‘AA412’,’American Airlines’,’16:45:00’,10:00:00’,’Sharjah International Airport’,’Business’);
+Insert into Airplane values(‘AA415’,’American Airlines’,’06:00:00’,’01:00:00’,’Sharjah International Airport’,’Economy’);
+
+Insert into Airplane values(‘EK155’,’Emirates’,’10:15:00’,’23:55:00’,’Sydney Kingsford Smith Airport’,Economy’);
+Insert into Airplane values(‘EK255’,’Emirates’,’10:15:00’,’23:55:00’,’Sharjah International Airport’,Economy’);
+Insert into Airplane values(‘QF512’,’Qantas’,’18:00:00’,’07:45:00’,’Sydney Kingsford Smith Airport’,’Business’);
+Insert into Airplane values(‘QF766’,’Qantas’,’10:15:00’,’23:55:00’,’Sharjah International Airport’,Economy’);
+Insert into Airplane values(‘QF221’,’Qantas’,’02:00:00’,’15:45:00’,Sydney Kingsford Smith Airport’,’First’);
+Insert into Airplane values(‘QF276’,’Qantas’,’01:00:00’,’14:45:00’,Sharjah International Airport’,’First’);
+
+Insert into Airplane values(‘CA217’,’Air China’,’14:30:00’,’22:00:00’,’Beijing Capital Airport’,Economy’);
+Insert into Airplane values(‘EY217’,Etihad Airways’,’23:00:00’,’06:15:00’,’Abu Dhabi International Airport’,’Economy’);
+Insert into Airplane values(‘EY712’,Etihad Airways’,’23:00:00’,’06:15:00’,’Beijing Capital Airport’,’Business’);
+Insert into Airplane values(‘EY121’,Etihad Airways’,’23:00:00’,’06:15:00’,’Beijing Capital Airport’,’Business’);
+
+Activities:
+Create table Activities(
+A_ID varchar(50),
+A_Name varchar(50),
+A_Type varchar(50)
+A_Location varchar(50));
+
+#Paris
+Insert into Activities(‘DISNEY’,’Disneyland’,’Entertainment’,’Boulevard de Parc’);
+Insert into Activities(‘LOUV’,’Louvre Museum’,’Sightseeing’,’Champ de Mars’);
+Insert into Activities(‘EIFFT’,’Eiffel Tower’,’Sightseeing’,’Champ de Mars’);
+Insert into Activities(‘ADT’,’Arc De Triomphe’,’Sightseeing’,’Champs-Élysées’);
+
+#London 
+Insert into Activities(‘BIGEYE’,’Big Ben + London Eye’,’Sightseeing’,’Palace of Westminster’);
+Insert into Activities(‘BUCKP’,’Buckingham Palace’,’Sightseeing’,’SW1A 1AA’);
+Insert into Activities(‘LHRBRGD’,’London Bridge’,’Sightseeing’,’Lake Havasu City’);
+Insert into Activities(‘MDMT’,’Madame Tussauds’,’ENTERTAINMENT’,’Marylebone Road’);
+Insert into Activities(‘TFGSQ’,’Trafalgar Square’,’SHOPPING’,’Trafalgar Square’);
+
+#New York
+Insert into Activities(‘TSQ’,’Times Square’,’Shopping’,’Manhattan’);
+Insert into Activities(‘SLIB’,’Statue Of Liberty’,’Sightseeing’,’New York Harbor’);
+Insert into Activities(’EMP’,’Empire State Building’,’Sightseeing’,’20 W 34th’);
+Insert into Activities(’CP’,’Central Park’,’Entertainment’,’NY’);
+Insert into Activities(’NHM’,’American Museum Of Natural History’,’Sightseeing’,’Manhattan’);
+Insert into Activities values(’FVAVE’,’Fifth Avenue’,’Shopping’,’Greenwich Village’);
+
+#Sydney
+Insert into Activities values(‘OHB’,’Sydney Opera House + Harbour Bridge’,’Sightseeing’,’Sydney harbour’);
+Insert into Activities values(‘SZOO’,’Sydney Zoo’,’Entertainment’,’Bungarribee’);
+Insert into Activities values(‘WW’,’Whale Watching’,’Entertainment’,’Sydney Harbour’);
+Insert into Activities values(‘JCAV’,’Jenolan Caves’,’Sightseeing’,’Jenolan Village’);
+Insert into Activities values(‘QVS’,’Queen Victoria Station’,’Shopping’,’Sydney Main Street’);
+
+#Beijing
+Insert into Activities values(‘GWC’,’The Great Wall Of China’,’SIGHTSEEING’,’Huairou District’);
+Insert into Activities values (‘FBC’,’Forbidden City’,’Sightseeing’,’Dongcheng’);
+Insert into Activities values (‘BZOO’,’Beijing Zoo’,’Entertainment’,’Xicheng’);
+Insert into Activities values(‘’NSVL’,’Nanshan Ski Village’,’Shopping’,Henanzhai Town’);
+Insert into Activities values(‘’BNS’,’Beijing National Stadium’,’Entertainment’,’Chaoyang’);
+
